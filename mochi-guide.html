@@ -145,6 +145,9 @@ footer{margin-top:28px;font-size:12px;color:var(--sub);text-align:center}
 .refs small{display:block;color:var(--sub);font-size:13px}
 .stepstrip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
 .stepstrip img{flex:0 0 auto;width:min(46%,210px);border-radius:16px;scroll-snap-align:start;display:block}
+.box.btm{display:flex;flex-direction:column}
+.box.btm .copy{margin-top:auto;align-self:flex-start}
+.box.btm .note,.box.btm .cap{margin-bottom:16px}
 </style>
 <style>body{margin:0}img{max-width:100%}</style>
 </head>
@@ -321,17 +324,17 @@ footer{margin-top:28px;font-size:12px;color:var(--sub);text-align:center}
     <h2 id="h-upload">投稿前の最終チェック</h2>
     <div class="banner"><span><b>投稿期間</b> 2026年10月26日（月）〜11月6日（金）</span><span><b>投稿期間は厳守</b>でお願いいたします</span></div>
     <div class="grid2">
-      <div class="box">
+      <div class="box btm">
         <h3>✅ 必須タグ・ハッシュタグ</h3>
         <div class="chips" id="tags">
           <span class="must">#PR</span><span>#モチ活</span><span>#トニーモリー</span><span>@tonymoly.jp_official</span>
         </div>
         <p class="note"><span class="ph">キャプションの一番上に <b>#PR</b> を必ず入れてください。</span><span class="ph">（ステマ規制により、PR投稿であることの表示が必要です）</span></p>
-        <p style="margin-top:12px"><button class="copy" type="button" data-copy="tags">必須タグをコピー</button></p>
+        <button class="copy" type="button" data-copy="tags">必須タグをコピー</button>
       </div>
-      <div class="box">
+      <div class="box btm">
         <h3>キャプション用 商品情報</h3>
-        <pre class="cap" id="cap">トニーモリー ワンダーセラミド モチ化粧水 500ml</pre>
+        <pre class="cap" id="cap"><span class="ph">トニーモリー</span> <span class="ph">ワンダーセラミド</span> <span class="ph">モチ化粧水 500ml</span></pre>
         <button class="copy" type="button" data-copy="cap">商品情報をコピー</button>
       </div>
     </div>
