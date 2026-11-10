@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X 化粧水·トナー 이미지 오가닉</title>
+<style>
+:root{--bg:#f6f6f4;--card:#fff;--ink:#1d1d1f;--sub:#6b6b70;--line:#e4e4e0;--acc:#d6336c;--chip:#f1f1ee}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--card:#1e1e21;--ink:#eee;--sub:#a0a0a6;--line:#2e2e33;--acc:#ff6b9a;--chip:#2a2a2e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 -apple-system,"Apple SD Gothic Neo","Hiragino Sans",sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:24px;margin:0 0 4px}.lead{color:var(--sub);margin:0 0 18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.box h2{font-size:16px;margin:0 0 8px}.box ul{margin:0;padding-left:18px}.box li{margin:3px 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;font-size:13px}
+.filters button.on{background:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.top{display:flex;justify-content:space-between;align-items:center}.rank{font-weight:700;color:var(--acc)}.views{font-weight:700;font-size:18px}
+.meta{font-size:12px;color:var(--sub)}.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:var(--chip);margin-right:4px}
+.imgs{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}.imgs.one{grid-template-columns:1fr}
+.imgs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;background:var(--chip)}.imgs.one img{aspect-ratio:4/3}
+.ko{font-weight:600}.ja{font-size:13px;color:var(--sub);border-left:3px solid var(--line);padding-left:8px}
+.stats{font-size:12px;color:var(--sub)}.c a{color:var(--acc);font-size:13px;text-decoration:none}
+</style></head><body><div class="wrap">
+<h1>X 「化粧水・トナー」 이미지 있는 오가닉 게시물</h1>
+<p class="lead">일본어 · 이미지 포함 · 조회수 30만+ · 브랜드 공식·미디어·경품·중복·무관한 글 제외 · 42건 · 2026-11-10 수집</p>
+<div class="box"><h2>한눈에 보이는 패턴</h2><ul>
+<li><b>「친구/간호사/피부과가 알려준」 출처형</b>이 저장이 많음 — 무인 「우유 같은 토너」, 치후레 미백, 닦토. 「믿을 만한 사람이 귀띔」 구조.</li>
+<li><b>「전신에 바샤바샤」 바디 사용</b>이 반복 등장 — 대용량 화장수를 욕실에서 전신에. 모찌 토너 500ml 대용량과 바로 연결.</li>
+<li><b>「もちもち / もち肌」 표현</b>이 여러 게시물에서 핵심 감탄사로 쓰임 → 「モチ活」 키워드와 맞음.</li>
+<li><b>이미지는 제품 손에 든 컷·성분표·비교 표·랭킹 표</b>가 대부분. 연출 사진보다 실사용 느낌.</li>
+<li><b>연예인 루틴 정리</b>(다나카 미나미·사시하라 리노·나카 리이사) 계정도 꾸준히 30만~300만 뷰.</li>
+</ul></div>
+<div class="filters" id="f"></div>
+<div class="grid" id="g"></div></div>
+<script>
+const C={R:"추천템",H:"사용법·루틴",L:"랭킹·비교",S:"연예인 루틴",F:"공감·유머"};
+const D=[
+["/emirio9o1/status/1720368448390447403","愛沢えみり","2023-11-03",28523647,13821,1178,2506,"H","F9_5_AjawAAu_tr,F9_5_AiaAAADuue","5년 전후 피부 비교 — 포토페이셜·물 2L·선크림·파데 끊기·스킨케어 재검토(특히 화장수)","顔も変わったけど５年間で肌も変わった。…スキンケア見直す（特に化粧水）"],
+["/KABIAMA_chan/status/1771095140519616966","カビあまちゃん。","2024-03-22",18568514,8265,844,909,"F","GJQxozubUAAM_Hc,GJQxoztbQAEPQzP","스킨케어 질문 받는데… 귀찮아서 하토무기 화장수 바샤바샤가 끝!","ハトムギ化粧水バシャバシャ！！以上！！！！"],
+["/yuzoraaoi/status/1914799555876675917","夕空あおい","2025-04-22",11293653,33785,2015,21198,"R","GpK8CSmasAA7SKW","「스킨케어 단계 너무 많음 문제」 → 시트팩 하나로 해결 (코스데코·룰룬·더마레이저)","『スキンケア、工程多すぎ問題』…唯一救ったのがパック。"],
+["/vazupolice_24/status/2022553087488201068","バズ警察24時","2026-02-14",11007386,10107,463,4558,"H","HBGNT-dakAI0JbI,HBGNT-bacAAizcY,HBCp4TUbsAAtvt4","[검증] 무인 「피부의 천연수」 전신 미스트 690엔으로 건조한 등이 매끈해지는지 비포애프터","【検証】無印良品 肌の天然水 全身用ミスト ¥690…検証中↓"],
+["/marunouchi__ol_/status/1919369637751603678","丸の内OLの憂鬱","2025-05-05",9406351,23842,1589,11906,"R","GqL4f_cbwAEgVVU,GqL4f_cbwAM_Sin","끌레드뽀 보떼 화장수 — 비싸지만 1번에 다른 화장수 5번 바른 보습력, 그래서 또 산다","化粧水の肌回復スピードが半端じゃない…1回で他の化粧水５回塗り込んだくらい"],
+["/garigari_mezas/status/1656965235197235201","𝙡𝙚𝙢𝙤𝙣 🍋","2023-05-12",8834546,48242,4378,11212,"R","Fv65GEcacAIHEEE,Fv65GEcacAEb4RJ","이하다 화장수 + 바셀린만으로 피부가 반짝 → 「비싼 스킨케어는 뭐였나」","イハダの化粧水とワセリンだけで肌がピカピカに…"],
+["/rikoriko_mt/status/2023329933196771777","りこ☺︎","2026-02-16",7724434,22100,1726,15232,"R","HBRP2TiboAE9GMz","엘릭실 리프트모이스트 로션 1~2주 사용 — 수분 미용액이 필요 없어졌다","エリクシールのリフトモイストローション…すごくない？？"],
+["/chachariho/status/1798097881012044243","りこな🧸","2024-06-04",6825408,22931,1545,18166,"R","GPQgfgya0AAwVzw","피부과 근무 친구 추천 — 닦토로 겨드랑이·팔꿈치·무릎 착색이 옅어짐 (같은 글 7월 재게시도 334만)","皮膚科に勤めてる友達に…拭き取り化粧水なんだけど…黒ずみ消えた"],
+["/_W_FN/status/2057284843701166338","めいとないと","2026-05-21",6724166,6122,815,1241,"R","HIzxqPGbkAAlWGu","남성 — 「쓰는 화장수는 나츄리에 하토무기」 + 꾸밈 조언","使ってる化粧水書いておきます。naturieのハトムギ化粧水です"],
+["/tyomateee/status/1689947425186951168","最多情報局","2023-08-11",5995220,61646,5819,1065,"F","F3PmObDbAAAZQDk,F3PmObEbgAAlGda","세븐일레븐 화장수 패키지 영문이 간사이 사투리였다","セブンイレブンで売ってた化粧水のパッケージの英文…まさかの関西弁。"],
+["/mudananiku_/status/1902569905641136143","ムダ肉ちゃん","2025-03-20",5820756,23038,1305,11633,"H","GmdJPnAa8AUZMoC,GmdJPm_a0AALG4q","모찌 피부 친구 추천 — 무인 「우유 같은 화장수」 2개 섞어 목욕 후 전신에 → もち肌","お肌が餅か？ってくらい白くてもちもちな友達が『無印の牛乳みたいな化粧水おすすめ🥛』"],
+["/koro___pi/status/1754361155127308475","ころちゃん","2024-02-05",5400085,32196,2686,16376,"R","GFi9uk6aAAAZ_5v,GFi9uk8a4AAGUHm","「이프사 화장수 닮은꼴」 드럭스토어템 — 트라넥삼산 더 많고 1,760엔","イプサの化粧水に似てると噂だったけど…定価1760円"],
+["/cosme_1151/status/1726217527745986606","ポテチ","2023-11-19",5203923,19051,1472,8494,"L","F_TBsJPbQAAO8eD,F_TBsJTa4AEPrNo","오다기리 히로 2023 하반기 베스트코스메(스킨케어) 정리 표","小田切ヒロさんが…【2023年下半期ベスコス スキンケア部門】をまとめました。"],
+["/ribboncchi/status/1856441962431476207","りぼんちゃん🎀","2024-11-12",4942527,43507,2437,17742,"R","GcNoH2WasAABAbo,GcNoIDYakAA-aHm","마츠키요 PB 화장수 「가성비 파괴」 — 비타C·히알루론산 7종·세라마이드 5종, 스프레이, 1,408엔","マツキヨの化粧水がガチぶっ壊れ性能。…これで税込1408円。"],
+["/marunouchi__ol_/status/1766424490211480049","丸の内OLの憂鬱","2024-03-09",4576223,20049,1433,5023,"R","GIOZrNwbAAARM0x","카네보 「나쁜 피지에만 작용하는」 화장수 — 「나보다 똑똑하네」","KANEBOが「肌に悪い皮脂にだけ働きかける」…私より賢いじゃん"],
+["/k_pu66/status/1722232045429313550","kk","2023-11-08",4387976,15431,993,4852,"R","F-aY6fVakAAx_Ud,F-aY6fTbwAAr9C6","핫요가 후 열린 모공이 수렴 화장수로 무섭게 닫혔다","収れん化粧水っていうのを使ってみたら怖いくらい毛穴閉じる。"],
+["/uhouhonurse/status/2085475805807989114","うほうほナース","2026-08-06",4384312,113274,3700,1141,"F","HPEZMU-aoAAIP4N","간호사 — 「환자가 SK-II 쓰는데 나는 하토무기야!?」 (좋아요 11만)","なんで生活保護の患者がSK-IIの化粧水使ってるん！？わたしハトムギやで！？"],
+["/_9743_o_sub/status/2040433162279620717","🙂‍↕️🎀","2026-04-04",4015640,21617,1907,9572,"H","HFETJZNboAA9IZ6,HE-20Mqb0AAa4Rs,HE-20MobQAAuy7U,HE-20MobAAEHKhY","마츠키요 세라마이드 화장수 500엔을 전신에 → 피부 もっちもち","このセラミド化粧水を全身に浴びると肌もっちもちになる‼️マツキヨに感謝500円。"],
+["/kikiq28/status/2015332059351535628","kiki","2026-01-25",3351363,17594,2758,11526,"H","G_flKzYaoAA95qv,G_flK1vboAAK2ES,G_flK1baAAALUIq,G_LRZVeasAEZj04","모공각화증 해결 루틴 — 레티놀 클렌징 → 아연 도입 화장수 → 나이아신아마이드 (2025.7 버전도 207만)","①レチノールクレンジング ②グルコン酸亜鉛の導入化粧水 ③ナイアシンアミドの美容液"],
+["/nnnchanpoyon/status/1657945579744563200","Nちゃん","2023-05-15",3342070,31393,3004,6656,"H","FwI0t55acAYzyB3,FwI0t51aMAAcb1L","전신 화장수 → 바디크림 마사지로 피부결이 바뀐다 — 대용량 미백 화장수 1,500엔 + 니베아","全身に化粧水吹きかける→ボディクリーム塗ってマッサージで肌質変わるはマジです"],
+["/skin_gw/status/1879770324302221355","顔面工事ちゃん","2025-01-16",3221189,17595,932,9997,"S","GhZJJaBaUAAr_lP,GhZJJaBbMAECLcl","다나카 미나미의 스킨케어 풀세트 — 화장수를 2달에 15병, 코튼팩으로","田中みなみ様が…化粧水とか、2ヶ月間で15本使うくらいコットンに染み込ませてパック"],
+["/marinpospia__/status/1776263760258511021","mari","2024-04-05",3201614,25808,1850,8835,"H","GKaOeKGbQAAR7d7","이 화장수를 몸에 바샤바샤 쓰고부터 바디크림이 필요 없어짐, 3병째","この化粧水を体にバシャバシャ使い始めてからボディクリーム使えなくなった"],
+["/mrumruco/status/1625830122342473730","◯","2023-02-15",2775228,24414,1958,2887,"R","FpAb4BMaUAQlrT0,FpAb4BKaAAE_DX7","이프사 미용액 스틱 4개째 — 눈가 주름·팔자에 낀 파데를 복구","イプサの美容液スティック、これで4本目🫢"],
+["/momochiko5/status/1834515263682920794","桃式部","2024-09-13",2712122,28075,2011,11666,"R","GXWB6KjWIAETCxk,GXWB6GkacAEgQrq","마츠키요 PB 신작 스프레이 화장수 1,400엔 — 「PB 담당자 너무 잘 안다」","マツキヨPB中の人、分かりすぎてる。…スプレータイプ(←ここ重要)の化粧水が1400円🥹"],
+["/marunouchi__ol_/status/1769671221539741879","丸の内OLの憂鬱","2024-03-18",2555303,22721,2124,5973,"H","GI8imF6awAA0HM0","하쿠쥰 대용량 화장수 1,500엔 — 욕실에서 전신에 → 다음날 아침 모찌감이 다름","お風呂場に持ち込んで全身に叩き込む→ボディクリーム…翌朝のモチモチ感が全然違う"],
+["/linhua___/status/1828706318984925288","lin","2024-08-28",2484243,21693,1301,12777,"R","GWDetBwb0AAFA0I","시술 간호사 귀띔 — 「크게 말 못 하지만 치후레 미백 화장수·유액이 민감피부 기미에 최고」 (4월 버전도 195만)","「本当はクリニックの製品勧めた方がいいので大きい声で言えないんですけど…ちふれの美白化粧水&乳液が…」"],
+["/sonokyomunikiku/status/1869587411354968574","ななな｜脱ファンデ計画","2024-12-19",2406783,18271,1121,9880,"L","GfIb1bPaUAAbLou","지금까지 쓴 화장수 A랭크 이상 평가표 — 속건조엔 마쓰야마유시","これまで使った化粧水の中で良かったものをピックアップ&評価。"],
+["/marunouchi__ol_/status/2048020419408809991","丸の内OLの憂鬱","2026-04-25",2286023,6723,629,3049,"R","HGwHt2Ea8AAClQ3,HGwHt2LaoAAkZOi,HDNZsJubQAEF6km,HDNZsJraQAAfIAP","야쿠르트 화장수 다 쓰고 재구매 — 모공이 덜 보임, 「아기 피부 무라카미 선수가 쓰던 것」","ヤクルトの化粧水使い切り。もう1本買ってしまった。"],
+["/marunouchi__ol_/status/1742197072152158568","丸の内OLの憂鬱","2024-01-02",2271142,11418,1642,9501,"L","GC2HAD-bUAAlMWu","재해 대피 경험으로 정리한 「방재 코스메」 — 전부 1,000엔대","災害で近隣の小学校へ避難した…【防災コスメ】をまとめました。"],
+["/kikiq28/status/1862043761024639350","kiki","2024-11-28",2227100,14507,864,5262,"H","Gdb6m7zbAAAPONK","인생템 전신 보습 = 무인 크림 화장수, 스프레이 노즐로 바꿔 목욕 직후 전신에 → 모찌모찌","無印のクリーム化粧水。…しっとりモッチモチになる"],
+["/maki_agingcare/status/1723640416271245478","Maki@シンママ美容オタク","2023-11-12",2114403,15096,1589,4775,"L","F-uZ0iDbcAAPVdc,F-uZ0iWbwAAf2cm","가성비 여자는 성분으로 골라라 — 트라넥삼산 화장수·비타C·레티놀·나이아신아마이드","コスパ重視女子は成分で選べ👩‍🎓 ■トラネキサム酸 →化粧水に取り入れて"],
+["/linhua___/status/1787707707027591298","lin","2024-05-07",1967107,26711,1933,7345,"H","GM82ry9acAAvaBY","피부 하얗고 모찌모찌한 친구의 무인 「우유 같은 토너」 전신 보습 → もち肌 + 피부 발광 (12월 재게시도 166만)","無印の牛乳みたいなトナー🥛(クリーム化粧水)で全身保湿…吸い付くようなもち肌爆誕&肌発光"],
+["/bozu_108/status/1704376090255618437","坊主","2023-09-20",1843912,6179,516,1426,"L","F6bjNEWbEAA7wsp,F6bjNzfacAA5drj,F6bjRyoaQAAVLpJ,F6bjTXxa0AA-Ix3","「추천 화장수 선수권」 최우수·금상·입선 4장 (2024.2 재게시도 139만)","おすすめの化粧水選手権 最優秀賞、金賞、入選、入選"],
+["/hn_pipi03/status/2027624561479717214","pipi","2026-02-28",1680366,18152,1566,8109,"R","HCORyezbEAASIfy,HBBKyTeXMAAU40X","카오 닦토 미용액 + 「100% 화장수 성분 세안」 탄산 세안","100%化粧水成分の洗顔で炭酸の力だけで洗い上げる神洗顔"],
+["/yuyudayo0924/status/1762320558010839139","さらさ","2024-02-27",1653770,16038,1473,6458,"H","GHUE5F1bYAAit9z,GHUE5FraoAAApGP","바디케어 필수 2개 — 몸에도 화장수 먼저 뿌리고 크림 → 마시멜로 바디","スキンケアと一緒で身体も先に化粧水ふりかけてから"],
+["/ma0226411/status/1747894413492408760","まさこ","2024-01-18",1365323,9879,1396,4831,"R","GEHEtBNaIAAlwjV,GEHEtBNawAEjeb8","몸용으로 산 비타C×레티놀 화장수 — 등 여드름이 사라져서 얼굴에도 사용","ビタミンC×レチの化粧水。体用にコスパ重視で買ったけど…"],
+["/yuyudayo0924/status/1761721824747114509","さらさ","2024-02-25",1329149,12898,1318,4109,"F","GHLkksebIAAV0EY,GHLkksiaUAArahI","엄청 하얀 친구 — 「미백 화장수는 안 쓰고 트란시노·하이치올C를 매일 먹는다」","点滴とか美白化粧水は一切使ってないらしい…"],
+["/maki_agingcare/status/1743937996737634640","Maki@シンママ美容オタク","2024-01-07",1007227,10052,1018,3420,"L","GDO2XV1aoAAmReZ","미용 오타쿠의 결론 — 기초 월 1만 엔(하쿠쥰 화장수 등) + 미용의료 월 4만 엔","1ヶ月の基礎化粧品予算1万円 ・白潤 薬用美白化粧水…"],
+["/manaka_070/status/2119701272613769298","まなか","2026-11-09",663709,2352,95,922,"S","HWquRNuagAA77f_,HWquTfXa0AAT5Nc,HWquVfVbgAAoyib,HUBBgh_boAA30Hw","「나카 리이사가 이 화장수를 자비로 산다니」 연예인 자비템","仲里依紗がこの化粧水自腹で買ってんのやべぇだろ。"],
+["/cgmgvo/status/2119377491232227691","垢抜けメモちゃん","2026-11-08",601007,860,81,444,"S","HWmKmB8bEAAHMtv,HWmKmB4a4AAKIdO,HWmKmB1bQAAZtAT","피부나이 20세 사시하라 리노 미용법 — 「고급 화장수보다 스티머 + 저렴 화장수」","肌年齢20歳、指原莉乃の美容法📝 ・高級化粧水よりスチーマー＋プチプラ化粧水"],
+["/RlhEIv0lS_IYlqZ/status/1605580274762678272","室長さん","2022-12-21",600345,3881,342,404,"S","Fkgqv6GaAAA4TZU,Fkgqv6GaEAAiut6,Fkgqv6CaUAADtS0,Fkgqv5_acAAIErk","미나미 리호가 딸기코 개선에 쓴 크리스티나 언스트레스 「トナー」 — 닦토·도입 화장수로","CHRISTINAのUNSTRESSトナー。…拭き取り&導入化粧水として使うと肌のトーンが"],
+["/around40JK/status/2118810947976569207","つきこ","2026-11-06",369077,1601,152,1400,"L","HWeHU4_aAAA-TiF","아라포가 화장수 유목 끝에 고른 일본 브랜드 4개 — 단점까지 (스레드)","化粧水ひとつでも目に見えた変化がほしくてジプシり…厳選した4つ、デメリットまで語らせて⬇"]
+];
+const fmt=n=>n>=1e4?(n/1e4).toFixed(n>=1e6?0:1).replace(/\.0$/,'')+'만':n.toLocaleString();
+const img=id=>`https://pbs.twimg.com/media/${id}?format=jpg&name=small`;
+const fb=document.getElementById('f');
+fb.innerHTML=`<button data-k="all" class="on">전체 ${D.length}</button>`+Object.entries(C).map(([k,v])=>`<button data-k="${k}">${v} ${D.filter(d=>d[7]===k).length}</button>`).join('')+`<button data-k="new">2026년 ${D.filter(d=>d[2]>='2026').length}</button>`;
+function render(k){document.getElementById('g').innerHTML=D.map((d,i)=>({d,i})).filter(({d})=>k==='all'||k===d[7]||(k==='new'&&d[2]>='2026')).map(({d,i})=>{const ims=d[8].split(',');return `
+<div class="c"><div class="top"><span class="rank">#${i+1}</span><span class="views">${fmt(d[3])} 뷰</span></div>
+<div class="meta"><span class="tag">${C[d[7]]}</span>${d[1]} · ${d[2]}</div>
+<div class="imgs ${ims.length===1?'one':''}">${ims.map(s=>`<a href="https://x.com${d[0]}" target="_blank"><img loading="lazy" src="${img(s)}" alt=""></a>`).join('')}</div>
+<div class="ko">${d[9]}</div><div class="ja">${d[10]}</div>
+<div class="stats">♥ ${fmt(d[4])} · 리포스트 ${fmt(d[5])} · 북마크 ${fmt(d[6])}</div>
+<a href="https://x.com${d[0]}" target="_blank">X에서 원문 보기 →</a></div>`}).join('')}
+fb.onclick=e=>{const b=e.target.closest('button');if(!b)return;fb.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));render(b.dataset.k)};
+render('all');
+</script></body></html>
